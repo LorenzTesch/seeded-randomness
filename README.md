@@ -5,10 +5,10 @@ Generate a semi-random number based on a string input.
 ```
 const dng = require('./dng');
 
-const value = dng('example_username+post_id', 1, 0);
+const value = dng('example_username+post_id', 100, 0); // returns int
 
 const probability = 0.2; // 20%
-const shouldPerformAction = value < probability;
+const shouldPerformAction = value / 100 < probability;
 
 if(shouldPerformAction){
     // press like button...
